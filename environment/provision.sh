@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo apt-get update -y
+sudo useradd --home /home/ubuntu/app app
+sudo chown -R app:app app
 sudo apt-get upgrade -y
 sudo apt-get install nginx -y
 sudo rm /etc/nginx/sites-available/default
