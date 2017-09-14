@@ -6,7 +6,7 @@ sudo chown -R app:app app
 sudo apt-get upgrade -y
 sudo apt-get install nginx -y
 sudo rm /etc/nginx/sites-available/default
-sudo cp /home/ubuntu/app/environment/nginx.default /etc/nginx/sites-available/default
+sudo cp /home/ubuntu/app/environment/web/nginx.default /etc/nginx/sites-available/default
 sudo service nginx restart
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
