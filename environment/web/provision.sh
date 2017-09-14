@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update -y
 sudo useradd --home /home/ubuntu/app app
 sudo chown -R app:app app
