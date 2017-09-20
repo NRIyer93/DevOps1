@@ -1,4 +1,4 @@
 source 'https://supermarket.chef.io'
 
-cookbook 'web', git: 'git@Github.com:NRIyer93/WebCookbook.git'
-cookbook 'db', git: 'git@Github.com:NRIyer93/DbCookbook.git'
+cookbook 'web', git: 'https://github.com/NRIyer93/WebCookbook.git'
+cookbook 'db', git: 'https://github.com/NRIyer93/DbCookbook.git'
