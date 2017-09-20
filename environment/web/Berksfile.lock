@@ -1,0 +1,7 @@
+DEPENDENCIES
+  web
+    git: git@Github.com:NRIyer93/WebCookbook.git
+    revision: a8403ceba1b640569d041b2618507b478689517d
+
+GRAPH
+  web (1.0.0)
