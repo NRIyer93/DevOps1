@@ -10,6 +10,20 @@ resource "aws_vpc" "public-private" {
   cidr_block = "11.2.0.0/16"
 }
 
+data "aws_ami" "web" {
+  filter {
+    name   = "state"
+    values = ["available"]
+  }
+
+  filter {
+    name   = "name"
+    values = ["naz-web-prod*"]
+  }
+
+  most_recent = true
+}
+
 resource "aws_subnet" "web" {
   vpc_id = "${aws_vpc.public-private.id}"
   cidr_block = "11.2.1.0/24"
@@ -42,7 +56,7 @@ resource "aws_security_group" "web" {
 }
 
 resource "aws_instance" "naz-instance" {
-  ami = "ami-c1c3d0a5"
+  ami = "${aws_ami.web.id}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.web.id}"]
   subnet_id = "${aws_subnet.web.id}"
