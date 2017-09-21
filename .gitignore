@@ -52,3 +52,7 @@ build-iPhoneSimulator/
 
 # Ignore vagrant folder
 .vagrant/
+
+/devops-terraform/terraform.tfstate
+/devops-terraform/terraform.tfstate.backup
+/devops-terraform/.terraform
